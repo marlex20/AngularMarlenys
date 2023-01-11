@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class EducacionServiceService {
 
- // URL = environment.URL + 'educacion/';
+ //URL = environment.URL + 'educacion/';
  URL = 'https://portfolio-marlex20.koyeb.app/educacion/';
   constructor(private httpClient: HttpClient) { }
 
