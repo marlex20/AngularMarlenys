@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ExperienciaLaboralServiceService {
 
-  URL = environment.URL + 'experienciaLaboral/';
+  URL = environment.URL + '/experienciaLaboral/';
 
   constructor(private httpClient: HttpClient) { }
   public lista(): Observable<ExperienciaLaboral[]> {  //array porque son varias experiencias

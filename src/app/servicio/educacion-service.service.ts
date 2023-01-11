@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class EducacionServiceService {
 
-  URL = environment.URL + 'educacion/';
+  URL = environment.URL + '/educacion/';
 
   constructor(private httpClient: HttpClient) { }
 
