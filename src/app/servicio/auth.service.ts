@@ -12,7 +12,7 @@ import { TokenService } from './token.service';
 })
 
 export class AuthService {
-  URL = environment.URL + '/auth/';
+  URL = environment.URL + 'auth/';
 
   constructor(private httpClient: HttpClient, private tokenService: TokenService) { }
 

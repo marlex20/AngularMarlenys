@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class HabilidadServiceService {
 
-  URL = environment.URL + '/habilidad/';
+  URL = environment.URL + 'habilidad/';
 
   constructor(private httpClient: HttpClient) { }
 

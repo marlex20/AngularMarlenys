@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class RedesServiceService {
 
-  URL = environment.URL + '/redes/';
+  URL = environment.URL + 'redes/';
 
   constructor(private httpClient: HttpClient) { }
 
