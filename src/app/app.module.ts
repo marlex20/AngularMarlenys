@@ -41,6 +41,9 @@ import { RedComponent } from './components/redes/red/red.component';
 import { ProyectoComponent } from './components/proyectos/proyecto/proyecto.component';
 import { HabilidadComponent } from './components/habilidades/habilidad/habilidad.component';
 import { FormuhabilidadEditarComponent } from './components/habilidades/formuhabilidad-editar/formuhabilidad-editar.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -90,7 +93,9 @@ import { FormuhabilidadEditarComponent } from './components/habilidades/formuhab
     NgbModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()) 
 
   ],
   

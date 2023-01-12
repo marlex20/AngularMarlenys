@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
+import { ImageServiceService } from 'src/app/servicio/image-service.service';
 import { PersonaService } from 'src/app/servicio/persona.service';
 import { TokenService } from 'src/app/servicio/token.service';
 
@@ -14,7 +15,7 @@ export class FormupersonaEditarComponent implements OnInit {
   persona: Persona = null;
 
   constructor(private personaService: PersonaService, private activatedRoute: ActivatedRoute,
-    private router: Router, private tokenService: TokenService) { }
+    private router: Router, private tokenService: TokenService, public imageService: ImageServiceService) { }
 
 
   ngOnInit(): void {
@@ -40,5 +41,12 @@ export class FormupersonaEditarComponent implements OnInit {
         this.router.navigate(['/dashboard']);
       }
     )
+  }
+  
+  upLoadImage($event:any){
+    this.imageService.upLoadImage($event);
+  }
+  upLoadPhoto($event:any){
+    this.imageService.uploadPhoto($event);
   }
 }
